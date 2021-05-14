@@ -1,6 +1,6 @@
 # header_gen_for_42_norm
 
-this script automatically add prototypes to your header with suitable tabs for norminette without libft.
+this script automatically add prototypes to your header file with suitable tabs for norminette without libft.
 
 write your header file name to NAME_H.
 
