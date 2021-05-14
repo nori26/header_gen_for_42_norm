@@ -6,4 +6,5 @@ write your header file name to NAME_H.
 for libft
 
 `find . -type d -name libft -prune -o -type f -name '*.c' | xargs cat |`
+
 `find . -type f -name '*.c' | xargs cat |`
