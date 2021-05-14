@@ -1,6 +1,6 @@
 #!/bin/bash
 
-NAME_H="name.h"
+NAME_H=".h"
 
 prot=$(find . -type d -name libft -prune -o -type f -name '*.c' | xargs cat | sed -e '/^[a-zA-Z].*)$/!d' -e '/^static/d' -e "s/)$/);/g")
 TABS=$(echo "${prot}" | awk '{sub("[\t ].*", "");print length($0)}' | sort -nr | head -n 1 | xargs -I{} expr {} / 4 + 1)
