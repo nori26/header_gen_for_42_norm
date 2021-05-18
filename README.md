@@ -1,15 +1,10 @@
 # header_gen_for_42_norm
 
-this script automatically add prototypes to your header with suitable tabs for norminette without libft.
-
-write your header file name to NAME_H.
-
+this script automatically add prototypes to your header with suitable tabs for norminette.
 
 maybe works for both bsd and gnu
 
 
-for libft
+usage
 
-`find . -type d -name libft -prune -o -type f -name '*.c' | xargs cat |`
-
-`find . -type f -name '*.c' | xargs cat |`
+cat Makefile
