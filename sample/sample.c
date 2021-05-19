@@ -14,11 +14,11 @@ typedef struct s2
 
 int a;
 
-int space_brefore_func_name()
+int space_before_func_name()
 int	*a()
 
-int	tab_brefore_func_name()
-int							multi_tabs_brefore_func_name()
+int	tab_before_func_name()
+int							multi_tabs_before_func_name()
 
 int	a()
 {
