@@ -29,6 +29,14 @@ int	a()
 void	b()
 
 void	b(int a, int b, char c)
+void	*b(int a, int b, char c)
+void *b(int a, int b, char c)
+int ******b(int a, int b, char c)
+int	******b(int a, int b, char c)
+long long ******b(int a, int b, char c)
+long long	******b(int a, int b, char c)
+double	******b(int a, int b, char c)
+
 
 unsigned long long	d(int a, int b)
 {

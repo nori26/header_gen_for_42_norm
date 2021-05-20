@@ -13,7 +13,7 @@ $(echo "${prot}" |
 	awk -v tabs=${TABS} '
 	{
 		s = $0;
-		sub("[\t ][\t ]*[a-zA-Z_0-9\\*][a-zA-Z_0-9]*\\(.*", "");
+		sub("[\t ][\t ]*\\**[a-zA-Z_0-9][a-zA-Z_0-9]*\\(.*", "");
 		t = "";
 		l = tabs - int(length($0) / 4);
 		for (i = 0; i < l; i++)
