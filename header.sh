@@ -3,11 +3,10 @@
 DIR=$1
 NAME_H=$2
 
-prot=$(find $1 -type f -name '*.c' | xargs cat | sed -e '/^[a-zA-Z].*)$/!d' -e '/^static/d' -e "s/)$/);/g")
+prot=$(find $1 -type f -name '*.c' | xargs cat | sed -e '/^[a-z_A-Z].*)$/!d' -e '/^static/d' -e "s/)$/);/g" | LC_ALL=C sort)
 TABS=$(echo "${prot}" | awk '{sub("[\t ][\t ]*\\**[a-zA-Z_0-9][a-zA-Z_0-9]*\\(.*", "");print length($0)}' |
 		sort -nr | head -n 1 | xargs -I{} expr {} / 4 + 1)
-
-header="$(sed -e "/^[a-zA-Z][a-zA-Z_0-9]*.*);$/d" -e '/#endif/d' -e '/^$/d' ${NAME_H})
+header="$(sed -e '/typedef /! s/^[a-z_A-Z][a-zA-Z_0-9]*.*);$//g' -e '/#endif/d' -e '/^$/d' ${NAME_H})
 
 $(echo "${prot}" |
 	awk -v tabs=${TABS} '
